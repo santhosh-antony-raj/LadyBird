@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    <body>
+     <header>
+        <h1>Welcome to The Little Taco Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">About LTS</a></li>
+                <li><a href="./index.html">Our Menu</a></li>
+                <li><a href="./storehours.html">Store Hours</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <figure>
+                <img src="../img/taco contact.jpg" alt="taco special dish" width="250" height="150" title="Little Taco Special Dish">
+                <figcaption>Little Taco Special Dish</figcaption>
+            </figure>
+            </article>
+            
+            <hr>
+            <article id="contact">
+                <h3>Contact Us</h3>
+                <fieldset>
+                    <legend>Our Contact Form</legend>
+                    <form action="https://httpbin.org/post" method="post">
+                        <p>
+                            <label for="username">Name</label>
+                            <input type="text" name="Name" id="Name" required autocomplete="on" placeholder="Your Name">
+                        </p>
+                        <p>
+                            <label for="Email">Email</label>
+                            <input type="email" name="Email" id="Email" required autocomplete="on" placeholder="Email Address">
+                        </p>
+                        <p>
+                            <label for="message">My Message</label>
+                            <br>
+                            <textarea name="mymessage" id="mymessage" col="40" rows="10"></textarea>
+                        </p>   
+                        <p>
+                            <button type="submit">send</button>
+                            <button type="reset">reset</button>
+                            
+                        </p>                    
+                    </form>
+                </fieldset>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p><a href="#">Back To The Top</a></p>
+         <hr>
+        <p>Copyright &copy; The Little Taco Shop</p>
+    </footer>
+</body>
+</html>
