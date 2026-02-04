@@ -1,0 +1,27 @@
+*git is a version controll System
+*github is a web based repository where we can collabrate our code.
+*.git file act as a bridge between github repo and local machine
+
+*github --> git copy folder ---> git working folder(where untracked files machine files is there) ----> staging area
+* git add means whatever i done modifications i just add it in staging area
+****creating new pull request in github as emplyee senior relationship finally mgr merge it github itself
+******OR compare pull in github itself when u have direct access
+branches
+*****Conflict
+GIT COMMANDS
+1.git
+2.git config --global user.name "santhoshanotnyraj2001@gmail.com"
+3.git config --global user.email "errormakesclever@gmail.com"
+4.git clone url
+5.git add test1.txt
+6.git status
+7.git commit -m "test1.txt added"
+8. git push origin main
+9. git pull
+10. git init helps to intialize empty git repsitory
+11.git remote add origin url
+12. git branch
+13. git branch -M main
+14. git branch -a
+15. git checkout branch 2
+16.git diff
