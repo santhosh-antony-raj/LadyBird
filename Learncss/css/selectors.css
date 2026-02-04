@@ -1,0 +1,27 @@
+                                    /* Simple Selectors */
+/* universal selector */
+*{
+    background-color: black;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    color: white;
+}
+/* Element selectors */
+h1{
+    color: green;
+}
+/* id selectors */
+#second{
+    color: brown;
+}
+/* class selectors */
+.gray{
+    color: aqua;
+}
+/*group by selectors*/
+h2,h3{
+    color: blueviolet;
+}
+
+

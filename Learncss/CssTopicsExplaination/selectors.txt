@@ -1,0 +1,25 @@
+selectors
+cascading stylesheet --> apply css line by line top to bottom like waterfall
+but give priority to class and id
+
+selectors
+1.simple selectors --> universal(*),class(.),group(,),id(#),Element(h1,p,body)
+2.Combinator selectors --> Descendent(body table tr td), child(body>table>tr), sibling(+), Adjacent(~)
+3.Pesudo Selectors --> link,active,Hover
+
+Priority
+1.id
+2.class,attributes and psuedoclass
+3.elements,psuedoelements
+
+for practise use SPECIFICITY CALCULATOR
+
+Inheritence
+*helps to have clean Code
+*declaring once we can apply styles for all the contents presented inside eg:body.
+Eg, body{
+font-size: 24px;
+}
+
+button{
+font: Inheritence} --> sometimes won't inherit so mention explicitly

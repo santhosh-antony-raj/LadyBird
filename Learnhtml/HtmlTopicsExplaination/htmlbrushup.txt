@@ -1,0 +1,48 @@
+intro
+1.head meta seo 
+2.body
+*heading h1,subheading h2,para p, hr(horizontal) line, line break <br>*10.
+* splitting section called block elements and emphazing inside the block called inline element like <em>,<Strong>
+*html entity &nbsp; &lt,&gt &copy
+*<address> tag we can control more when using advance concepts and any other code reader, assistive technologies try to read the code  
+* comments<!--> inspect can see comments . abbrevation abrr, mime type in mdn
+* li -> ol,ul,dl description 
+*absolute reference anchor tage/ relative refernce head of refof pages 
+*eg internal ref by using <section> so, by top list it sections refby  he section id"#ch4"
+*img src alt humilative layout swift mandatory to set default WXH , title, loading =lazy and figure wrap up img <figcaption> ,<code> for both image and to show explicitly
+*SEMANTIC TAGS 
+*semantic  cheat sheet(learntheweb) 
+<nav> labelledby link to h1 id is a best way, to practise use
+<nav aria-label="primary-section">
+*aside detail summary used to Hide details and only show summary when we click summary show details.
+*<div><span> depricated always try to use semantic tags 
+*TABLE
+<table><caption><thead><tbody><tfoot><tr><th><td> colspan ,rowspan 
+*scope attribute in HTML is used to make tables more understandable—especially for screen readers.
+*section article
+*section - grouping all realted content
+*article - standalone and idependent content make sense by itself
+*form label input placeholder autofocus (refresh) page Autocomplete required pattern regex min max value step
+*for form id and for should same
+*select optgroup help to group the option multiple choice 
+*datalist
+*fieldset helps to wrap the set of things as a bundle like inputs in form
+*fieldset we can give legend
+*radio , checkbox, textarea cols, rows
+*from action https://httpbin.org/get",method="get"
+3.vs code tips
+*command+ D select all same types
+*shift+down arrow copy
+*input:
+*alt+shift+A command that selected
+
+4.inspect
+*disable cache
+5.best practise
+*always thing and try to acheive how fast our site gonna responsive
+6.useful links and resources
+*w3c validator
+*Mdn resources
+*loremipsum use for placeholders dummy or use (unsplash,gratsography,pexels,pixabay) royalty free
+*use (irfanview software for crop the image aspect ratio u wanted
+*compress tinypng.

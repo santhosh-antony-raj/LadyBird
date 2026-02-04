@@ -1,0 +1,15 @@
+
+Body{
+    background-color: rgb(255,255,255);
+}
+
+article{
+    background-color: #000000;
+    color: #ffffff;
+}
+.gray{
+    color: #00ff00;
+}
+#second{
+    color:  hsla(0, 100%, 50%, 0.827);
+}

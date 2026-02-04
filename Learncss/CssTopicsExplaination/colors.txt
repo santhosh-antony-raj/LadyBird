@@ -1,0 +1,24 @@
+*****************colors**********************
+*Colors To make our site more presentable use colors .
+*set colors for BG and Text Contrastly and maintain  the Web Content Accessibility Guidelines (WCAG)
+*eg use coolers website for color pick and contrast check
+
+we set diff colors in style sheet by using syntax
+
+h1{
+colors: red;
+background: white;
+}
+
+Basically colors forms by combination of RGB(red,Green,Blue)
+*eg RGB(0,0,0) --> black
+* RGB(255,255,255) ---> white
+
+RGBA --> which stands for red,green,blue and opacity(0,0.5,1)
+
+like wise they are RGB,RGBA,HSL,HSLA,hexadecimal
+HSL(Hue,saturation,light)
+HSLA(Hue,saturation,light,opacity)
+hexadecimal --> #00ff00
+
+
