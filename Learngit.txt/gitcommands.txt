@@ -20,8 +20,10 @@ GIT COMMANDS
 9. git pull
 10. git init helps to intialize empty git repsitory
 11.git remote add origin url
-12. git branch
+12. git branch --> git branch new branch name
 13. git branch -M main
 14. git branch -a
 15. git checkout branch 2
 16.git diff
+17.git merge branch 2
+18.git pull request concept junior ,senior relation collbarated project merge conflict resolve in github
