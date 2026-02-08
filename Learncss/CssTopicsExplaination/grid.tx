@@ -1,0 +1,101 @@
+grid help to split each container or box as a grid column wise.
+
+use display mention grid and to have controll specifically use grid-template-column: 
+
+u can give seperate values for each like grid-template-column: 100px 100px 200px or 1fr, 2fr(like in a row takes 1share).
+
+or go with repeat(2,1fr 2fr)--> repeat(count,pattern); 
+so like for 
+
+grid-template-columns: repeat(3, 1fr 2fr);
+How repeat() works
+repeat(count, pattern)
+
+
+So here:
+
+count = 3
+
+pattern = 1fr 2fr (⚠️ two columns)
+
+What actually gets created
+
+The pattern 1fr 2fr is repeated 3 times:
+
+1fr | 2fr | 1fr | 2fr | 1fr | 2fr
+
+
+👉 Total columns = 6
+
+Width math
+
+Each pair:
+
+1fr + 2fr = 3fr
+
+Total:
+
+3 pairs × 3fr = 9fr
+
+Each column size:
+
+1fr = 1/9 of space
+
+2fr = 2/9 of space
+
+2️⃣ grid-template-columns: repeat(2, 1fr 2fr);
+Expansion
+1fr | 2fr | 1fr | 2fr
+
+
+👉 Total columns = 4
+
+Width math
+
+2 × (1fr + 2fr) = 6fr
+
+1fr = 1/6
+
+2fr = 2/6
+
+3️⃣ grid-template-columns: repeat(4, 1fr 2fr);
+Expansion
+1fr | 2fr | 1fr | 2fr | 1fr | 2fr | 1fr | 2fr
+
+
+👉 Total columns = 8
+
+Width math
+
+4 × (1fr + 2fr) = 12fr
+
+1fr = 1/12
+
+2fr = 2/12
+
+🔥 Key confusion cleared
+❌ Wrong assumption
+
+repeat(3, 1fr 2fr) means 3 columns
+
+✅ Correct understanding
+
+repeat(3, 1fr 2fr) means
+repeat the column pattern 3 times
+
+🧠 Easy memory trick
+
+👉 Columns = count × number of values inside repeat
+
+Code	Columns
+repeat(3, 1fr)	3
+repeat(3, 1fr 2fr)	6
+repeat(4, 1fr 2fr)	8
+🎯 Interview one-liner
+
+repeat(3, 1fr 2fr) creates 6 columns by repeating a 2-column pattern three times, where 2fr columns are twice as wide as 1fr.
+
+make item as an container help of flex concept
+display:flex
+
+practise : grid garden

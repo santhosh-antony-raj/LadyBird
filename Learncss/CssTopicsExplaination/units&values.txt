@@ -1,0 +1,15 @@
+units and values
+
+**browser settings
+settings appearence very small, large but user defined values only taken for website
+commonly use px
+
+
+rem(root element) for font based on browser default font size 16px
+em(baesd on parent element) for font, padding
+%(relative) use border or vw ,vh viewport width and height  appear scroll so stick with % 
+ch for width eg 40ch
+
+user agent style sheet browser set style sheet inspect dev tools style box
+
+use  min-height:100vh for pages so min always it appears. 

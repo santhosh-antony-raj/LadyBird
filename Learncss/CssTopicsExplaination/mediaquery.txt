@@ -1,0 +1,7 @@
+@media media type (condition: breakpoint){}
+
+using media query we can set different style for our site based on dimension of the web page like mobile phone,ipad,laptop,tv
+
+eg @media screen and (min-width:576px){}
+@media screen and (orientation:landscape or portrait){}
+@media screen and (min-width:576px) and (min-aspect-ratio:16/9){}
