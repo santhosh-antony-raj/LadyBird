@@ -1,0 +1,88 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Body Typography Base
+========================= */
+body{
+
+    /* Google Font + Web Safe fallback */
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+/* =========================
+   Header
+========================= */
+header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-weight: 600;
+}
+
+/* =========================
+   Section Box
+========================= */
+section{
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+/* =========================
+   Text Indent Example
+========================= */
+.indent{
+    text-indent: 2em;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Letter + Word Spacing
+========================= */
+.spacing{
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Text Decoration
+========================= */
+.decorate{
+    text-decoration: underline;
+}
+
+.decorate:hover{
+    text-decoration: line-through;
+}
+
+/* =========================
+   Inheritance Example
+========================= */
+.inherit-box{
+    font-size: 1.2rem;
+    font-family: inherit;
+}
+
+/* Inputs & Buttons inherit font */
+input, button{
+    font: inherit;
+    padding: 0.6em 1em;
+    margin-top: 1rem;
+}

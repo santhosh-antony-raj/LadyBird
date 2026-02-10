@@ -1,0 +1,84 @@
+/* Begin Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* End Reset */
+
+/* Utility class */
+
+.nowrap{
+    /* white-space: nowrap; */
+    display: flex;
+    flex-wrap: nowrap;
+}
+.offscreen{
+     position: absolute;
+    margin: -10000000px;
+}
+
+/* Utility class End */
+
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-image: url(/Learncss/css/img/isolated-bubbles-floating-background.png),linear-gradient(to right,steelblue,rgb(206, 181, 41));
+    background-repeat: repeat,no-repeat;
+    background-position: right;
+    background-size: 20% ,auto;
+}
+.example{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding-left: 20px;
+}
+.example img{
+    width: 25%;
+    height: auto;
+    
+}
+.container{
+    background-color: bisque;
+     background-image: url(/Learncss/css/img/meritt-thomas-BwBxVVdlpYE-unsplash.jpg);
+     background-repeat: repeat;
+     background-size: cover;
+     background-position:center;
+}
+image{
+    display: block;
+}
+.hero{
+     border-bottom: 3px solid black;
+     padding: 20px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 30px;
+     background-color: rgba(0, 0, 0, 0.407);
+}
+     
+
+.profile-pic{
+   
+    width: 15%;
+
+   
+}
+.profile-pic img{
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    border-radius: 50%;
+    border: 5px double whitesmoke;
+}
+h1{
+    font-size: 500%;
+    color: rgba(245, 245, 245, 0.027);
+    background-image: url(/Learncss/css/img/meritt-thomas-BwBxVVdlpYE-unsplash.jpg);
+     background-size:cover;
+     background-position: bottom;
+     background-clip: text ;
+    
+}
+

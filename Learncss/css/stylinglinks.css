@@ -1,0 +1,55 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Page Style
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+/* =========================
+   Default Link Override
+========================= */
+a{
+    text-decoration: none;   /* remove underline */
+    color: blue;
+    font-weight: bold;
+}
+
+/* =========================
+   Visited Link
+========================= */
+a:visited{
+    color: purple;
+}
+
+/* =========================
+   Hover + Focus
+========================= */
+a:hover,
+a:focus{
+    color: red;
+    text-decoration: underline;
+}
+
+/* =========================
+   Active (While Clicking)
+========================= */
+a:active{
+    color: green;
+}
+
+/* =========================
+   Opacity Example
+========================= */
+a:hover{
+    opacity: 0.7;
+}

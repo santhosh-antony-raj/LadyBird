@@ -1,0 +1,8 @@
+Display
+
+gives hybrid solution
+block level element like p,h1 take full view port width
+inline element takes exact what the content present inside the inline element.
+when there is a adding of padd,margin to inline element it wouldn't fit with block level element so display
+
+display:block,inline-block.

@@ -1,0 +1,10 @@
+styling links
+for links how to apply styles by overrdinding default browser style
+
+a anchor tag is a element which have diff state we call it has pseudo class .
+help of psuedo selectors we can style it
+a:visited
+a:hover, a:focus(when click tab got to click link set color)
+a:active
+
+opacity,aplha,transparency are same.

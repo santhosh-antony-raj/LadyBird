@@ -1,0 +1,16 @@
+a:hover{
+    color:red;
+}
+
+li:nth-child(2){
+    color:blue;
+}
+
+.para::first-letter{
+    font-size:2rem;
+    color:green;
+}
+
+.para::before{
+    content:"★ ";
+}

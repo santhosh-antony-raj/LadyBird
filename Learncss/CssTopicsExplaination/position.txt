@@ -1,0 +1,9 @@
+position
+position:relative(parent) auto immediate
+position:absolute(based on relative) default body,
+poaition:fixed always fixed even scroll
+position:sticky stick to marked positioned until its container go off from the visiblitiy like scroll .that time at end they also gone.
+top:100px
+left:100px 
+z-index: 1 -->layer 1 we indexing it in 1 so apperence priority
+scroll-behaviour:smooth;

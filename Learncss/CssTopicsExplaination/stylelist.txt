@@ -1,0 +1,15 @@
+styling list 
+list-style-type:disc,upper-roman
+<ol start="3" reversed>
+ul
+text-align: center;
+list-style-position: inside;
+color: blue;
+list-style: square url(../img/checkmark.png) inside;(helps to fallback if link won't work)
+ul li:nth-child(2)
+::marker pseudo elemnet  
+
+list style type : lower-alpha
+<li value =20>
+
+mini project list/style styling 

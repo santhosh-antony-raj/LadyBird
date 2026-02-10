@@ -1,0 +1,63 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Page Style
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+section{
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   Unordered List Styling
+========================= */
+.custom-ul{
+    text-align: center;
+    color: blue;
+
+    /* marker inside content box */
+    list-style-position: inside;
+
+    /* shorthand with fallback */
+    list-style: square url("../img/checkmark.png") inside;
+}
+
+/* =========================
+   nth-child Example
+========================= */
+.custom-ul li:nth-child(2){
+    color: red;
+    font-weight: bold;
+}
+
+/* =========================
+   Marker Pseudo Element
+========================= */
+.custom-ul li::marker{
+    color: green;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   Ordered List Styling
+========================= */
+.custom-ol{
+    list-style-type: upper-roman;
+    margin-left: 2rem;
+}
+
+/* lower-alpha example */
+.custom-ol li{
+    list-style-type: lower-alpha;
+}

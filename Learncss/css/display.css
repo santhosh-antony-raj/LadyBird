@@ -1,0 +1,57 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Page Style
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+section{
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   Block Example
+========================= */
+.block{
+    display: block;
+    background: lightblue;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+/* =========================
+   Inline Example
+========================= */
+.inline{
+    display: inline;
+    background: pink;
+
+    /* padding works left-right mostly */
+    padding: 1rem;
+
+    /* margin top/bottom not effective */
+    margin: 1rem;
+}
+
+/* =========================
+   Inline Block Example
+========================= */
+.inline-block{
+    display: inline-block;
+    background: lightgreen;
+
+    padding: 1rem;
+    margin: 1rem;
+
+    width: 150px;
+}

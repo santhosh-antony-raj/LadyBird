@@ -1,0 +1,97 @@
+columns
+helps to separate content into column wise
+column-count:4;
+coluum-width:200px;
+columns: 4 250px; 
+column-rule: 1px solid black;
+column-gap: 3rem;
+
+.column p{
+margin-top:0;
+} 
+margin collapsing both column top bottom set 2px collpase consider 2px
+ 
+break-inside: avoid;
+break-before: column;
+white-space:nowrap;
+
+
+⭐ column-count
+column-count: 4;
+
+
+Content forced into 4 columns.
+
+⭐ column-width
+column-width: 200px;
+
+
+Browser decides column count automatically.
+
+⭐ columns Shorthand
+columns: 4 250px;
+
+
+Means:
+
+max 4 columns
+min width 250px
+
+⭐ column-gap
+column-gap: 3rem;
+
+
+Space between columns.
+
+⭐ column-rule (Column Border)
+column-rule: 2px solid black;
+
+⭐ Margin Collapsing (Your Note ✔)
+
+Columns sometimes collapse top margins →
+So we set:
+
+.columns p{
+ margin-top: 0;
+}
+
+⭐ break-inside
+break-inside: avoid;
+
+
+Prevents element splitting across columns.
+
+⭐ break-before
+break-before: column;
+
+
+Forces next column start.
+
+⭐ white-space
+white-space: nowrap;
+
+
+Stops text wrapping.
+
+✅ Your Theory — Correct 👍
+
+✔ Columns split content vertically
+✔ Column shorthand exists
+✔ Column rule is like border
+✔ Break controls column flow
+✔ White space controls wrapping
+
+⭐ Real World Usage
+
+Columns used for:
+✔ News articles
+✔ Blogs
+✔ Magazine layouts
+
+Not used for:
+❌ Main page layout
+(Use Flex / Grid)
+
+⭐ Interview One Line
+
+CSS columns are mainly used for flowing text content like newspapers, not for main layout structure.

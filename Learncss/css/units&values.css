@@ -1,3 +1,97 @@
+/* =========================
+   User Agent Reset
+========================= */
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Root (REM reference)
+   Default browser font = 16px
+========================= */
+html{
+    font-size: 16px; /* 1rem = 16px */
+}
+
+/* =========================
+   Body
+========================= */
+body{
+    min-height: 100vh;  /* Always full screen height */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* =========================
+   Header
+========================= */
+header{
     background-color: black;
+    color: white;
+    padding: 1rem; /* 16px */
+}
+
+header h1{
+    font-size: 2rem; /* 32px */
+}
+
+/* =========================
+   Main Layout
+========================= */
+main{
+    width: 80%;   /* % relative to parent */
+    margin: 2rem auto;
+}
+
+/* =========================
+   Articles
+========================= */
+article{
+    border: 2px solid black;
+    padding: 1.5em;   /* relative to article font size */
+    margin-bottom: 2rem;
+    min-height: 30vh; /* viewport height */
+}
+
+/* =========================
+   Headings
+========================= */
+h2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   Paragraphs
+========================= */
+p{
+    font-size: 1rem;
+    max-width: 60ch; /* limit text width */
+}
+
+/* =========================
+   Classes
+========================= */
+.gray{
+    color: gray;
+}
+
+.highlight{
+    background-color: yellow;
+    padding: 0.2em 0.4em;
+}
+
+/* =========================
+   Viewport Width Example
+========================= */
+main{
+    max-width: 900px;
+    width: 90vw; /* responsive width */
 }

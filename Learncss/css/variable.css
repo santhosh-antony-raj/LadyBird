@@ -1,0 +1,18 @@
+:root{
+    --main-color: blue;
+    --box-padding: 20px;
+}
+
+body{
+    font-family: Arial;
+}
+
+h1{
+    color: var(--main-color);
+}
+
+.box{
+    background: var(--main-color);
+    padding: var(--box-padding);
+    color: white;
+}

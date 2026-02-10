@@ -1,0 +1,63 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Page Style
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+/* =========================
+   Columns Container
+========================= */
+.columns{
+
+    /* Method 1 */
+    column-count: 4;
+
+    /* Method 2 */
+    column-width: 200px;
+
+    /* Method 3 (Shorthand) */
+    columns: 4 250px;
+
+    column-gap: 3rem;
+
+    column-rule: 2px solid black;
+}
+
+/* Remove top margin collapse inside column */
+.columns p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Break Controls
+========================= */
+
+/* Avoid splitting element */
+.avoid{
+    break-inside: avoid;
+    background: lightyellow;
+}
+
+/* Force next column */
+.break{
+    break-before: column;
+    background: lightblue;
+}
+
+/* Prevent text wrapping */
+.nowrap{
+    white-space: nowrap;
+    background: lightpink;
+}

@@ -1,0 +1,51 @@
+✅ 17️⃣ PSEUDO — Key Concepts (TXT Notes)
+⭐ What is Pseudo?
+
+Used to style:
+
+Special state of element → Pseudo Classes
+
+Part of element → Pseudo Elements
+
+⭐ Pseudo Classes ( : )
+
+State based styling.
+
+Examples:
+
+:hover
+:active
+:focus
+:visited
+:nth-child()
+:first-child
+:last-child
+:not()
+:is()
+
+
+Example:
+
+a:hover { color:red; }
+
+⭐ Pseudo Elements ( :: )
+
+Style specific part of element.
+
+Examples:
+
+::before
+::after
+::first-letter
+::first-line
+::marker
+::selection
+
+
+Example:
+
+p::first-letter { font-size:2rem; }
+
+⭐ Difference
+: → state
+:: → part of element

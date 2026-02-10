@@ -1,0 +1,12 @@
+flexbox
+display:flex
+justify-content: space-around,flex-start,flex-end,space-between,flex-center,space-evenly
+align-items: center
+flex-direction: row,column,row-reverse,column-reverse
+flex-wrap: wrap to avoid overflow
+flex-flow: row wrap; combo of dir and wrap
+align-content: to manage space between
+flex-basis: 100px;
+flex-grow: 2 grow 2x flex-basis
+flex-shrink: 2shrink 2x flex-basis
+mention single command flex: 1 1 200px

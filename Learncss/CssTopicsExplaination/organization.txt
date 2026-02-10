@@ -1,0 +1,113 @@
+CSS ORGANIZATION — Key Concepts (TXT Notes)
+⭐ What is CSS Organization?
+
+Writing CSS in structured, readable, maintainable way.
+
+Helps:
+✅ Easy debugging
+✅ Team collaboration
+✅ Reusable styles
+✅ Scalable projects
+
+⭐ Common CSS Order (Very Important 🔥)
+1️⃣ Reset / Normalize
+
+Remove browser default styles.
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+2️⃣ Root Variables
+
+Global reusable values.
+
+:root{
+ --main-color: blue;
+}
+
+3️⃣ Base Styles
+
+Body, typography, links.
+
+body{}
+h1{}
+p{}
+a{}
+
+4️⃣ Layout Styles
+
+Header, main, footer, container.
+
+header{}
+main{}
+.container{}
+
+5️⃣ Component Styles
+
+Buttons, cards, navbar.
+
+.button{}
+.card{}
+.navbar{}
+
+6️⃣ Utility Classes
+
+Small reusable helpers.
+
+.text-center{}
+.mt-1{}
+.hidden{}
+
+7️⃣ Media Queries (Always Last 🔥)
+@media(){}
+
+⭐ Naming Best Practices
+✔ Use Meaningful Names
+.card-title
+.nav-item
+.btn-primary
+
+✔ Avoid
+.red-text
+.big-box
+
+
+(Design may change later ❌)
+
+⭐ Comment Sections (Real Project Style)
+/* =================
+   HEADER
+================= */
+
+⭐ File Structure (Real Projects)
+css/
+ ├ reset.css
+ ├ variables.css
+ ├ layout.css
+ ├ components.css
+ ├ utilities.css
+ └ main.css
+
+ Real Project Golden Rules 🔥
+✔ Mobile First
+
+Write base → then media queries.
+
+✔ Reusable Variables
+
+Colors, spacing, font sizes → variables.
+
+✔ Components Independent
+
+Card should work anywhere.
+
+✔ Keep CSS Sections Clear
+
+Reset → Base → Layout → Component → Utilities → Media
+
+✅ Interview One-Line Answer
+
+CSS organization means structuring styles into logical sections like reset, base, layout, components, utilities, and media queries for scalability and maintainability.

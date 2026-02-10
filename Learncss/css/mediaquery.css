@@ -1,0 +1,88 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Base (Mobile First)
+========================= */
+body{
+    font-family: Arial, sans-serif;
+}
+
+header{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.box{
+    background: lightblue;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* =========================
+   Tablet Breakpoint
+   >= 576px
+========================= */
+@media screen and (min-width: 576px){
+
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .box{
+        width: 48%;
+    }
+}
+
+/* =========================
+   Laptop Breakpoint
+   >= 992px
+========================= */
+@media screen and (min-width: 992px){
+
+    .box{
+        width: 30%;
+        font-size: 1.5rem;
+    }
+
+    body{
+        background: #f5f5f5;
+    }
+}
+
+/* =========================
+   Orientation Example
+========================= */
+@media screen and (orientation: landscape){
+
+    header{
+        background: darkgreen;
+    }
+}
+
+/* =========================
+   Aspect Ratio Example
+========================= */
+@media screen and (min-width: 576px) and (min-aspect-ratio: 16/9){
+
+    body{
+        border: 8px solid red;
+    }
+}

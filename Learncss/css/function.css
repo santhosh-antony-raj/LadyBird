@@ -1,0 +1,14 @@
+:root{
+    --main-color: purple;
+}
+
+.calc-box{
+    width: calc(100% - 200px);
+    background: var(--main-color);
+    padding: 20px;
+    color: white;
+}
+
+.clamp-text{
+    font-size: clamp(1rem, 3vw, 2rem);
+}

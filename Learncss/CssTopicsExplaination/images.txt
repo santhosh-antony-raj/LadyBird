@@ -1,0 +1,23 @@
+For images Mentioning WXH is common practise
+*use square image for round profile set --> border-radius:50%
+*background-image: url()--> can add url local or online resource to show bg image
+transparency images url() helps to show the bg color we set it like background-color:red mix well and give a different vibe;
+** control Bg image
+background-repeat: norepeat,x-repeat,y-repeat,repeat(default-behaviour);
+backround-size: cover (for big scene photos helps to cover almost the img) like contain (contain whole image);
+background-position: which helps to coverd size which part to show(top,bottom,left,right,center)
+
+simple way
+backround: repeat position url, repeat  position url 
+
+**
+text-shadow : helps to give shadow to our text so the content visiblity in foreground to background much clear. 2px,2px,2px, black
+background-color: shadow transition help to give transition effect use rgba or hsla
+
+*****Linear gradient***
+give two colors and it transform one to other linearly 
+background-image: Linear-gradient(to left, steelblue, white); --> left,right,bootom,right helps to which side the transform occurs
+
+
+*****Radila gradient****
+which helps to transform one to other radiantly 

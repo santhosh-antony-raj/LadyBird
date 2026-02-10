@@ -1,0 +1,23 @@
+box model
+
+ when doing styles for pages each content takes how much space can wee see through box model in dev tools computed tab.
+
+it will be important topic for frontend  developer in different usecases to analyse there contents takes how much spaces
+
+*{
+margin0
+padd0
+b-s borderbox
+}
+.container
+{
+border:
+margin:top,right,bottom,left or (top,Down),(lef,rig)
+font-size:
+padding:
+} 
+border outline its doesnt occupy space in our content area box model
+outline offset is helps to set outline how far from main comntent border
+margin 2em auto (accroding to left and right ) take center
+
+typography

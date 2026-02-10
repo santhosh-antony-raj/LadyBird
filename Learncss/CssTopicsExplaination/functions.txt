@@ -1,0 +1,29 @@
+18️⃣ CSS FUNCTIONS — Key Concepts (TXT Notes)
+⭐ What is CSS Function?
+
+Built-in function to calculate or modify values.
+
+⭐ Common Functions
+calc()
+
+Math calculation.
+
+width: calc(100% - 100px);
+
+clamp()
+
+Responsive range control.
+
+font-size: clamp(1rem, 2vw, 2rem);
+
+min() / max()
+
+Choose min or max value.
+
+width: min(500px, 90%);
+
+var()
+
+Use variables.
+
+color: var(--main-color);

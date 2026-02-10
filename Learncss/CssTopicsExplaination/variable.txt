@@ -1,0 +1,24 @@
+17️⃣ CSS VARIABLES — Key Concepts (TXT Notes)
+⭐ What is Variable?
+
+Store reusable value.
+
+⭐ Syntax
+--variable-name: value;
+
+
+Use:
+
+var(--variable-name)
+
+⭐ Global Variables
+
+Inside:
+
+:root{}
+
+⭐ Benefits
+
+✅ Reusable
+✅ Easy theme change
+✅ Cleaner code

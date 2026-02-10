@@ -1,0 +1,55 @@
+/* =========================
+   Reset
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Page Style
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+}
+
+/* =========================
+   Container
+========================= */
+.container{
+    border: 2px solid black;
+    padding: 1rem;
+
+    /* Modern float fix */
+    display: flow-root;
+}
+
+/* =========================
+   Float Example
+========================= */
+.float-left{
+    float: left;
+    margin-right: 1rem;
+}
+
+.float-right{
+    float: right;
+}
+
+/* =========================
+   Clear (Old Way)
+========================= */
+.clear{
+    clear: both;
+}
+
+/* =========================
+   After Content
+========================= */
+.after{
+    margin-top: 2rem;
+    padding: 1rem;
+    background: lightblue;
+}
