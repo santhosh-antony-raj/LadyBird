@@ -1,0 +1,54 @@
+Bootstrap is a powerful css framework helps to create responsive UI with is pre defined components.
+
+****CONTAINER****
+.container -- is a fixed width container gives orientation
+.container-fluid
+
+****typography****
+display-1 like wise 1,2,3,4,5,6
+h1,h2h3,h4,h5,h6
+
+****colors****
+text->muted,light,white,dark,secondary,sucess,warning,danger,info
+bg->muted,light,white,dark,secondary,sucess,warning,danger,info
+btn->muted,light,white,dark,secondary,sucess,warning,danger,info
+
+****Padding,Margin*****
+P-2(0-5) apply all side
+py-3 -> top and bottom
+px-1 -> left and right
+pt,pb,ps,pe (top,bottom,start,end)
+
+m-2(0-5) apply all side
+my-3 -> top and bottom
+mx-1 -> left and right
+mt,mb,ms,me (top,bottom,start,end)
+
+*****GRID******
+.row
+.col --> total 12 control by setting range col-12, col-md-4 (sm,md,lg,xl) device size 
+basically one div take 6 col
+
+****img****
+img-fluid  make image flex in col 
+img-fluid rounded ->round border
+img-fluid rounded h-100 w-100 -> fill col parent given space 100%
+
+***list****
+list-inline
+list-inline-item
+
+****flex****
+d-flex
+justifycontent-start
+justifycontent-md-end like wise .
+
+****Postion***
+sticky-top,bottom,start,end
+fixed-top,bottom,start,end
+
+****form****
+form-group class
+form-control -> to take control of input box show apply some css styles
+
+
