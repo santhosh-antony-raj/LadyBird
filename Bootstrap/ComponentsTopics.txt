@@ -1,12 +1,47 @@
-Navbar
-Navbar Collapse
+Navbar✔
+Navbar Collapse✔
+BreadCrumbs✔
+ListGroups✔
+Cards✔
+DropDowns✔
+Model✔
+Nav & Tabs ✔
+ToolTips ✔
+PopOvers ✔
+Pagination ✔
+Badges✔
+
+Navbar,Navbar Collapse  
+Are used to have a navigational bar in our web app through we can navigate different links and Collapse
+used here to collapse the content inside the toggle bar icon for smaller device which helps to design,  show case website much nicer.
+
 BreadCrumbs
-ListGroups
+using this we can indiacte current page navigational hirerarchy.
+
+List ListGroups
+using we can list the item neatly by list-group-flush , list-group-item.
+
 Cards
-DropDowns
+card used to display the content in structue format
+
+Badge
+indicate the message
+
 Model
-Nav & Tabs
-ToolTips
-PopOvers
-Pagination
-Badges
+are used to add dialogue to your site , and completely custom content like alert, notification
+
+DropDowns✔
+are used to dropdown the overlays contextual stylink links
+
+ToolTips and popvers 
+are like act like title attribute  which in img element which is used to give additional info about the particualr button or thing.
+
+nav & tab
+
+
+pagination
+helps to show active page and move left to right .
+
+
+IMportant******************links design
+vector images, getwaves
