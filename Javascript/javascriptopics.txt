@@ -1,0 +1,257 @@
+ Introduction
+ Let's use same tool
+Chapter 2 : Link JS to HTML
+ Chapter 3 : Strings
+ Chapter 4 : Numbers
+ Chapter 5 : Math Methods
+ Chapter 6 : Code Challenge
+ Chapter 7 : If Statements
+ Chapter 8 : Switch Statements
+ Chapter 9 : Ternary Operators
+ Chapter 10 : User Input
+ Chapter 11: Exercise
+ Chapter 12: Loops
+ Chapter 13: Functions
+ Chapter 14: Scope - var,let, const
+ Chapter 15: Arrays
+ Chapter 16: Project 2
+ Chapter 17: Objects
+ Chapter 18: Classes
+ Chapter 19: JSON
+ Chapter 20: How to handle errors
+ Chapter 21: Document Object Model (DOM)
+ Chapter 22: Event Listeners
+ Chapter 23: Application Programming Interface (API)
+ Chapter 24: Modules
+ Chapter 25: Higher Order Functions
+Final Project
+
+*Intro & Setup*
+– Intro
+– Setup Environment for JavaScript
+
+*Variables & Data Types*
+– Variables in JavaScript
+– Hoisting Explained
+– Variable Scope in JavaScript
+– Variable Keyword Scope (var, let, const)
+– Type Coercion in JavaScript
+– Logical Operator Return Values
+– Equality Operators (== vs ===)
+– Nullish Coalescing Operator
+– Primitive vs Reference Types
+– Truthy & Falsy Values + Short-circuit Evaluation
+– Template Literals & Multi-line Strings
+– Symbol Type
+
+*Type Checking & Type Conversion*
+– Type Checking & Type Conversion
+– String Datatype & String Methods
+
+*Functions*
+– Functions in JavaScript
+– Closure Explained
+– Arrow Functions & Lexical this
+– Default & Rest Parameters
+– Callback Hell & How to Avoid
+
+*Arrays*
+– Arrays in JavaScript
+– Array forEach Method
+– Array map Method
+– Array filter Method
+– Array find Method
+– Array some Method
+– Array reduce Method
+– Advanced Array Methods: flat, flatMap, findIndex, every, includes
+– Array Sorting & Reversing
+
+*🧩 Project 1: Student Score System*
+– Build a Student Score System
+
+*Objects*
+– Working with Objects
+– Object values() Method
+– Object keys() Method
+– Object entries() Method
+– Object freeze() Method
+– Object seal() Method
+– Understanding the this Keyword
+– new Keyword in JavaScript
+– JavaScript Prototypes
+– JavaScript Classes
+– Object Destructuring in Functions
+– Getters & Setters
+– Object Methods Shorthand
+
+*👩‍💼 Project 2: Employee Management System*
+– Build an Employee Management System
+
+*Loops & Modern JS Features*
+– For...in Loop
+– Spread Operator & Rest Operator
+– Destructuring Assignment
+– Nested Destructuring
+– Optional Chaining
+– Try-Catch Error Handling
+
+*Promises & Async*
+– Understanding Promises
+– Promise then() Method
+– Promise catch() Method
+– Why Promises Are Needed
+– Async/Await Simplified
+– Fetch API (GET & POST) + JSON.parse / JSON.stringify
+– Async Iteration: for await...of
+– setTimeout in JavaScript
+– setInterval in JavaScript
+– LocalStorage in JavaScript
+– ES Modules (import/export)
+
+*DOM Manipulation*
+– Introduction to DOM
+– Get Element by ID
+– Get Element by Name
+– Get Elements by Class Name
+– Get Elements by Tag Name
+– Query Selector
+– Query Selector All
+– Access Child Elements
+– Access Parent Element
+– Create DOM Elements
+– Remove DOM Elements
+– Get Attribute of an Element
+– Create or Update Attributes
+
+*DOM Events Handling*
+– JavaScript Events
+– Types of Event Handlers
+– Mouse Event Handling
+– Keyboard Event Handling
+– Event Delegation
+– Class List Manipulation: add, remove, toggle
+– Form Handling & Validation
+
+*🧠 Project 3: Quiz App*
+ – Quiz App Overview
+ – JavaScript Data & Setup
+ – Show Questions Dynamically
+ – Handle Answer
+
+*Conclusion*
+ – Conclusion
+
+
+These are the few gaps that would make your curriculum feel professional-level complete.
+
+1️⃣ Execution Context & Call Stack
+
+This is how JS actually runs code.
+
+Execution context
+
+Call stack
+
+Memory creation phase vs execution phase
+
+Event loop (microtask vs macrotask queue)
+
+👉 This is the #1 concept interviewers test.
+
+2️⃣ Deep vs Shallow Copy
+
+Super important when working with objects & arrays.
+
+structuredClone()
+
+JSON clone limitations
+
+Spread vs Object.assign
+
+Reference mutation bugs
+
+3️⃣ Functional Programming Concepts
+
+You touched higher-order functions, but these concepts complete it:
+
+Pure functions
+
+Immutability
+
+Function composition
+
+Currying (important for advanced JS thinking)
+
+4️⃣ Advanced Error Handling Patterns
+
+You have try/catch — great. Add:
+
+Custom Error classes
+
+Error propagation
+
+finally block usage
+
+Handling async errors properly
+
+5️⃣ Browser Runtime Concepts
+
+Since you teach DOM + async, this fits perfectly:
+
+Event loop in browser
+
+Web APIs concept
+
+Rendering pipeline basics
+
+Debounce & throttle (VERY useful in real apps)
+
+6️⃣ Modern JavaScript Patterns
+
+These appear in real projects constantly:
+
+Factory functions vs classes
+
+Module pattern
+
+Singleton pattern (basic idea)
+
+Defensive programming
+
+7️⃣ Package Ecosystem Awareness
+
+Not coding heavy, but industry essential:
+
+What is npm
+
+package.json basics
+
+Semantic versioning
+
+Installing libraries
+
+8️⃣ Testing Basics (Huge real-world value)
+
+Even simple exposure helps:
+
+Why testing matters
+
+Unit testing idea
+
+Assertion concept
+
+(Optional) Jest intro
+
+🧠 If this were a professional course…
+
+To reach 100/100 coverage, add one final section:
+
+🚀 JavaScript Runtime & Architecture
+
+– Execution Context
+– Call Stack
+– Event Loop Deep Dive
+– Memory Management Basics
+– Debounce & Throttle
+
+That would turn this from “great course” → “industry-grade curriculum”.

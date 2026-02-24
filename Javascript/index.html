@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common FIle</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+
+        header{
+            display: flex;
+            text-align: center;
+            margin: 10px;
+           
+        }
+        body{
+            min-height: 100vh;
+            
+            
+        }
+        main{
+            border: 10px solid black;
+        
+            
+        }
+        .view1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            
+            
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2px;
+            
+        }
+        .view2{
+            background-color: blue;
+            min-height: 100vh;
+            display: none;
+        }
+        .purple{
+            background-color: purple;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+        .black{
+            background-color: black;
+        }
+        .height100px{
+            height: 100px;
+        }
+    </style>
+</head>
+<body >
+    <header>
+        <h1>
+            DOM Manipulation
+        </h1>
+    </header>
+    <main>
+        <section id="prev1"></section>
+        <section id="view1" class="view view1">
+            <div>1</div>a
+            <div>2</div>b
+            <div>3</div>c
+            <div>4</div>d
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </section>
+        <section id="view2" class="view view2"></section>
+        <section class="prev4"></section>
+    </main>
+
+    <script src="./DomManipulation/dommanipulation.js"></script>
+</body>
+</html>

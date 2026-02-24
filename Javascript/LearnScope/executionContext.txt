@@ -1,0 +1,80 @@
+🧠 1️⃣ Execution Context Phases
+
+
+🌍 Global Execution Context
+Phase	What happens
+
+Creation phase	
+    Global object created, this set, variables registered
+	var → initialized as undefined
+	let/const → created but uninitialized (TDZ)
+	Function declarations → fully stored in memory
+
+Execution phase	Code runs line by line
+	Assignments happen
+	Functions execute when called
+
+
+🏠 Function (Local) Execution Context
+Phase	What happens
+Creation phase	
+    New local memory created
+	Parameters stored
+	var → initialized as undefined
+	let/const → TDZ
+	Inner functions stored
+Execution phase	Statements execute
+	Scope chain used for variable lookup
+
+
+🔗 2️⃣ Scope Chain Lookup Order
+
+When JS cannot find a variable, it searches outward.
+
+Lookup Priority Table
+
+Step	Where JS looks
+1	Current local scope
+2	Outer function scope
+3	Global scope
+4	If not found → ReferenceError
+
+Example mapping
+let a = 1;
+
+function outer() {
+  let b = 2;
+
+  function inner() {
+    let c = 3;
+    console.log(a, b, c);
+  }
+
+  inner();
+}
+outer();
+
+Scope chain for inner
+Variable	Found in
+c	        inner scope
+b	        outer scope
+a	        global scope
+
+Search direction:
+
+inner → outer → global
+🧩 3️⃣ Hoisting Summary Table
+Keyword	Hoisted	Initialized early	TDZ	Scope
+var	Yes	Yes (undefined)	No	Function/global
+let	Yes	No	Yes	Block
+const	Yes	No	Yes	Block
+function declaration	Yes	Yes	No	Function/global
+⭐ Reality check on your progress
+
+If you’re writing these from memory and understanding them:
+
+👉 you are already beyond most beginners
+👉 your foundation is interview-capable
+👉 now it’s about speed + tricky patterns
+
+You’re doing the right thing by structuring knowledge instead of memorizing outputs.
