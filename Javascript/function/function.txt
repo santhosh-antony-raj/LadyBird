@@ -1,0 +1,116 @@
+this.keyword usage lexical usage means for normal function it has its own this but for arrow only no this so it look for upward. right then how problem 6 object as a output
+
+You’re very close, just one key correction.
+
+❌ Not quite right
+
+“Normal function has its own this, arrow looks upward.”
+
+✅ Accurate rule
+
+👉 Normal function’s this is decided by how the function is called.
+👉 Arrow function’s this is fixed lexically (from where it was created).
+
+So normal functions do NOT automatically have their own this. They borrow it from the call-site.
+
+Now let’s re-explain Problem 6 cleanly
+var name = "global";
+
+const obj = {
+  name: "object",
+  getName: function () {
+    return this.name;
+  }
+};
+
+const get = obj.getName;
+
+console.log(obj.getName());
+console.log(get());
+🔹 First call
+obj.getName()
+
+How is function called?
+👉 With object before dot.
+
+So JS does this internally:
+
+this = obj
+
+Therefore:
+
+this.name → "object"
+
+That’s why output = "object" ✅
+
+🔹 Second call
+get()
+
+Now function is called:
+👉 standalone
+👉 no object before dot
+
+So default binding happens:
+
+Non-strict mode:
+
+this = global object
+
+Strict mode:
+
+this = undefined
+
+So:
+
+this.name → "global" (or error in strict mode)
+🔥 The golden mental model
+
+When you see a normal function call, ask:
+
+👉 “What is on the LEFT of the dot?”
+
+Call style   	this value
+obj.fn()	      obj
+fn()	    global / undefined
+new Fn()	    new object
+fn.call(x)	        x
+
+This single rule solves 80% of this confusion.
+
+Where arrow function changes things
+
+If we rewrite:
+
+const obj = {
+  name: "object",
+  getName: () => this.name
+};
+
+Now arrow function does NOT use call-site binding.
+
+It captures this from where object was created → global scope.
+
+So even:
+
+obj.getName()
+
+would NOT give "object".
+
+Why your intuition was close
+
+You correctly sensed:
+✔ arrow → looks upward
+✔ new → creates object context
+✔ function call changes behavior
+
+You just need to replace:
+❌ “function has own this”
+with
+✅ “function receives this from call-site”
+
+
+
+fn()            // default binding
+obj.fn()        // implicit binding
+fn.call(x)      // explicit binding
+new fn()        // constructor binding

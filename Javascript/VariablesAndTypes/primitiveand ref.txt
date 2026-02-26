@@ -1,0 +1,16 @@
+primitive
+string //look like ref beacuse of its methods .trim(), tolowercase() its make temperory wraper the string as obj and disapper immediately
+number
+boolean
+null
+undefined
+bigint
+symbol
+
+Ref
+object
+array
+function
+date
+map// like key value and .map like <i class="fas fa-stream    "></i>
+set

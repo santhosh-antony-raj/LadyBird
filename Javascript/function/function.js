@@ -39,14 +39,14 @@ const box = {
     apple:100,
     orange:25,
     myFun :function(){
-        this.apple=200;//this keywork act as this function keyword
+        this.apple=200;//this keywork act as this obj function keyworf it behave dyynamically
     },
     hello:()=>{
-        this.apple=250;//since no this in arrow act as box level this keyword
+        this.apple=250;//arrow always refers to this means global level it makes window.apple=250 not box.apple use strict throw error
     }
 }
 box.hello();
-console.log(`apple myFunc ${apple}`);
+console.log(`apple myFunc ${box.apple}`);//100 only beacuse it 
 
 //default parameter and rest parameter
 
@@ -67,3 +67,23 @@ const sumvalue = function(...numbers){
    
 }
 sumvalue(1,2,3,4);
+
+/* funtion are helps to avoid code duplication and call when actually its needs maintain clean code */
+
+//naming function
+const hello = function(){
+    console.log("Hello World");
+    return "Hello World";
+    
+}
+hello();
+
+//custom function
+const MyName = "santhosh";
+const toProperCase = ()=>{
+    return MyName.slice(0,1).toUpperCase() + MyName.slice(1).toLowerCase();       
+}
+const finalMyName = toProperCase();
+console.log(finalMyName);
+
+

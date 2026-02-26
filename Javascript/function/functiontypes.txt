@@ -1,0 +1,43 @@
+✅ Core Function Types
+
+Function Declaration
+
+Function Expression
+
+Arrow Function
+
+Method
+
+Constructor Function
+
+Generator Function
+
+Async Function
+
+Async Generator Function
+
+IIFE (Immediately Invoked Function Expression)
+
+✅ Function Expression Variants
+
+Named Function Expression
+
+Anonymous Function
+
+✅ Object-Related Function Forms
+
+Getter Function
+
+Setter Function
+
+✅ Class-Related Function Forms
+
+Class Method
+
+Static Method
+
+Constructor (inside class)
+
+✅ Special Invocation Helpers
+
+Bound Function (via bind())

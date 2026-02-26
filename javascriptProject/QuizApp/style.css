@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#quiz-container{
+    margin:50px auto;
+    max-width: 400px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgb(110, 109, 109);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+
+.btn{
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(235, 233, 230);
+    cursor: pointer;
+}
+
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ffb3b3;
+}
