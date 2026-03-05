@@ -7,9 +7,10 @@ Method✔s
 Compued Properties✔
 Watchers✔
 
-Behind the Scene 
+Behind the Scene✔ 
 
 Intermendiate
+CLI Setup ✔
 Components
 Components Communication
 Behind the Scenes
