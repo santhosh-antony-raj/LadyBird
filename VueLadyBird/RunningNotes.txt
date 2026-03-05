@@ -1,0 +1,233 @@
+vue is a complete component based UI framework which have most common future . a bit less popular than react and angular by EvanYou opensource
+
+lean and focused component based UI framework which sticks mostly library oriented (eg routing) by Facebook
+
+angular is a complete component based UI framework which cover all the core futures. used it in big enterprises. by Google
+
+vue -> global object
+createApp({})-> through we can pass it our object
+
+vue.createApp({});  
+
+
+In Basic Module Going To learn
+*Vue+Html = Template
+*Outputting Dynamic Content
+*Reacting to User Input
+
+if a vue mounted for particular element
+then that element(entire snippet) get controlled by vue special feature . and all its child element get controlled by vue itself.
+
+the special features which used mostly for output
+
+Interpolitation --> {{}} act as log render out in between paired tag as a value
+
+B-bind --> for inner attribute use v-bind directive which have written by set of rules to bind the data for inner attribute eg V-bind:href="datapropertyname"
+
+data--> is a data property hold a function inside return object(can any format)
+
+methods--> is a property full of object
+
+v-html --> used for render if the vue try to render a content with html syntax
+in js file
+inside vue.createApp({
+hold multiple options reserved key like data, Methods
+
+data--> is a data property hold a function inside return object(can any format)
+eg data: function(){} or data(){}
+
+data(){
+	return{
+		Marks:[],
+		std:{},
+		name:'<h1>HEllo</h1>'
+}
+}
+methods--> is a property full of object
+methods:{
+	
+}
+})
+
+************Event Binding******************
+V-on --> is a directive for event listen
+v-on:click --> is event like(click,input,submit,keyup,mouseover) many
+v-on:submit.prevent ---> is a modifiers helps based on event what should do or when should do like(enter,prevent,left,right,pagedown,pageup);
+v-once --> directive which render value once make static from rerendering.
+***************************************************************************************************************************************
+
+
+*********Data Binding + Event Binding**********
+v-on:click +  v-bind:value => v-model -->simple
+
+************Advanced reactiviy***************
+
+method, --> use with event binding OR data binding
+computed, --> use with data binding
+watch --> not used directly in template
+
+methods --> executed for every Re-render cycle of the componenet
+
+computed --> only re-evaluated if one of their
+used values changed
+
+watch --> allow you to run code in reaction to some changed data eg send http request, timer,
+
+
+methods --> use where really needs to be re0evaluated all the time
+computed --> use for data that depends on other data
+watch --> use for any non-data u want to make
+
+
+v-on and  v-bind shorthands
+ v-on --> @
+ v-bind --> :
+**************************************************************************************************
+
+********Module Summary
+DoM $ Templates
+Vue can be used to defined the goal istead of the steps . means declarative approach(maintain by framework itself(system)).
+
+Data & Event Bindings
+You can bind data via intepolation {{}} or the v-bind(":") directive.
+you listen for events via v-on("@")
+
+Reactivity
+Vue updates the real DOM for you when bound data changes
+Computed properties and watchers allow you to react to data changes
+
+styling
+Dynamic Css class and inline style bindings are supported by Vue
+Vue offers multiple special syntaxes
+(onbject-based, array-based) for efficient bindings.
+**********************************************************************************************************************************
+module summary
+
+*******conditional content
+v-if(and v-show) allows you to render content only if a certain condition is met
+
+v-if can be combined with v-else ans v-else-if(only on direct sibling elements)
+
+Lists
+v-for can be used to render multiple elements dynamically
+v-for can be used with arrays, objects and ranges(numbers).
+
+v-for Variations
+You can extract values, index, keys
+if you nedd v-for and v-if , Don't use them on the same element. Use a Wrapper with v-id instead.
+
+keys
+Vue re-uses DoM elements to optimize performance -> this can lead to bugs if elements contain state
+
+bind the key attribute to a unique value to help vue identify elements that belong to the list
+*****************************************************************************************************
+
+proxy  Reactivity
+wrapping by using of proxy your value and update it give current target value . under the hood vue does this for us this magic.
+
+one App vs Multple App.
+can have multiple app each controlled by there own app which uniquely mounted.
+
+template 
+each section mounted consider template which i say  emphasis it.
+
+template we use inside our vue app 
+eg template :`<p>{{Message}}</p>` throug back tick
+
+ref
+instead of log in every key stroke use ref to access it only when u want the value.
+ref --> store Key:value
+
+access it by this.$refs.refName;
+
+how vue update DOM
+**basically vue update particular thing not the whole page .
+**how a raw idea is comparing old value with new yse but not more efficient
+**so its use virtual dom compare old vir DOM value to new Vir Dom and update only differences in Browser the real DoM and its more efficient.
+*** this how vue works in the nut shell 
+
+vue instance lifecycle
+createApp({})
+||
+\/
+beforeCreate()
+||
+\/
+created()-----------||
+|		    \/
+|		Compile template
+|		    ||
+beforeMount()-------\/
+||
+\/
+mounted()
+|
+mounted Vue Instance
+|
+data changed - beforeUpdate()-updated()
+|
+instance unmounted - before unmounted() - unmounted()
+
+
+//introducing to components
+the comp are reuseablility used to overcome realtime problem like 
+(when render data to html page by eventlist a btn but click the btn to hide and show details will apply for all)
+.
+so create comp once use it how many times like u want
+
+You might recall lecture 3 ("Different Ways of Using Vue"): You can use Vue.js to control parts of (possibly multiple HTML) pages OR you use it to build so-called "Single Page Applications" (SPAs).
+
+If you control multiple, independent parts of HTML pages, you will often work with multiple Vue apps (i.e. you create multiple apps by calling createApp() more than once).
+
+On the other hand, if you're building a SPA, you typically work with just one "root app" (i.e. createApp() is only used once in your entire codebase) and you instead build up a user interface with multiple components.
+
+You absolutely are allowed to also use components in cases where you have multiple Vue apps but you typically won't use multiple Vue apps if you build one big connected user interface.
+
+Why?
+
+Because Vue apps are independent from each other - they can't really communicate with each other. You might find "hacks" to make it work but there's no great "official" way of sharing data between apps, updating something in app A in case something happens in app B etc.
+
+Components on the other hand - as you will learn soon - DO offer certain communication mechanisms that allow you to exchange data between them. Hence you can build one connected UI if you work with one root app that holds multiple components. 
+
+
+so far we work with the setup single js , html page import vue.js link 
+
+but it is not scale well. 
+so move on to better development setup
+
+vue CLI Setup
+why?
+current state
+we always need to reolad page
+IDE auto-completion is highly limited
+we work in just one file OR we need to handle multiple files with multiple <script src=""> imports.
+
+Wanted State
+Saved changed should be auto-detected and page should reload/update
+IDE should provide better auto-completion and hints
+we should be able to able to split code into multiple files and export/import via Es Modules
+
+************************************************
+Fixing npm run serve (Vue CLI)
+In the next lecture, we will use a third-party tool (Vue CLI)  to create a new project. This tool, under the hood, uses NodeJS - a software which you need to download as part of the next lecture.
+
+You will learn about the details in the next lectures but in case you're getting any errors when trying to run Vue projects (via npm run serve, after creating them via the Vue CLI), try the following adjustment:
+
+Replace the scripts entry in your project's package.json before running npm run serve:
+
+Windows:
+
+"scripts": {  
+  "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",  
+  "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",  
+  "lint": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
+},
+Mac and Linux:
+
+"scripts": {  
+  "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",  
+  "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",  
+  "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
+},
+ 
+

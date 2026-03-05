@@ -1,0 +1,25 @@
+Basics 
+core syntax ✔
+Templates✔
+Directives✔
+Data✔
+Method✔s
+Compued Properties✔
+Watchers✔
+
+Behind the Scene 
+
+Intermendiate
+Components
+Components Communication
+Behind the Scenes
+Forms
+Http
+Routing
+Animations
+
+Advanced
+Vuex,Authentication,Deployment & Optimization,
+Composition Api, Re-using Code
+
+
