@@ -1,34 +1,44 @@
-vue is a complete component based UI framework which have most common future . a bit less popular than react and angular by EvanYou opensource
-
-lean and focused component based UI framework which sticks mostly library oriented (eg routing) by Facebook
-
-angular is a complete component based UI framework which cover all the core futures. used it in big enterprises. by Google
-
 vue -> global object
-createApp({})-> through we can pass it our object
+createApp({})-> we can call it
 
 vue.createApp({});  
+
+Basics 
+core syntax
+Templates
+Directives
+Data
+Methods
+Compued Properties
+Watchers
+
+Intermendiate
+Components
+Components Communication
+Behind the Scenes
+Forms
+Http
+Routing
+Animations
+
+Advanced
+Vuex,Authentication,Deployment & Optimization,
+Composition Api, Re-using Code
 
 
 In Basic Module Going To learn
 *Vue+Html = Template
-*Outputting Dynamic Content
-*Reacting to User Input
+Outputting Dynamic Content
+Reacting to User Input
 
 if a vue mounted for particular element
 then that element(entire snippet) get controlled by vue special feature . and all its child element get controlled by vue itself.
 
 the special features which used mostly for output
-
-Interpolitation --> {{}} act as log render out in between paired tag as a value
+Interpolitation --> {{}} act as log render out inbetween paired tag as a value
 
 B-bind --> for inner attribute use v-bind directive which have written by set of rules to bind the data for inner attribute eg V-bind:href="datapropertyname"
 
-data--> is a data property hold a function inside return object(can any format)
-
-methods--> is a property full of object
-
-v-html --> used for render if the vue try to render a content with html syntax
 in js file
 inside vue.createApp({
 hold multiple options reserved key like data, Methods
@@ -40,7 +50,7 @@ data(){
 	return{
 		Marks:[],
 		std:{},
-		name:'<h1>HEllo</h1>'
+		name:''
 }
 }
 methods--> is a property full of object
@@ -49,18 +59,7 @@ methods:{
 }
 })
 
-************Event Binding******************
-V-on --> is a directive for event listen
-v-on:click --> is event like(click,input,submit,keyup,mouseover) many
-v-on:submit.prevent ---> is a modifiers helps based on event what should do or when should do like(enter,prevent,left,right,pagedown,pageup);
-v-once --> directive which render value once make static from rerendering.
-***************************************************************************************************************************************
-
-
-*********Data Binding + Event Binding**********
-v-on:click +  v-bind:value => v-model -->simple
-
-************Advanced reactiviy***************
+Advanced reactiviy
 
 method, --> use with event binding OR data binding
 computed, --> use with data binding
@@ -82,11 +81,10 @@ watch --> use for any non-data u want to make
 v-on and  v-bind shorthands
  v-on --> @
  v-bind --> :
-**************************************************************************************************
 
-********Module Summary
+Module Summary
 DoM $ Templates
-Vue can be used to defined the goal istead of the steps . means declarative approach(maintain by framework itself(system)).
+Vue can be used to defined the goal istead of the steps . means declarative approach(maintain by framework itself(system).
 
 Data & Event Bindings
 You can bind data via intepolation {{}} or the v-bind(":") directive.
@@ -100,10 +98,9 @@ styling
 Dynamic Css class and inline style bindings are supported by Vue
 Vue offers multiple special syntaxes
 (onbject-based, array-based) for efficient bindings.
-**********************************************************************************************************************************
-module summary
 
-*******conditional content
+module summary
+conditional content
 v-if(and v-show) allows you to render content only if a certain condition is met
 
 v-if can be combined with v-else ans v-else-if(only on direct sibling elements)
@@ -120,7 +117,6 @@ keys
 Vue re-uses DoM elements to optimize performance -> this can lead to bugs if elements contain state
 
 bind the key attribute to a unique value to help vue identify elements that belong to the list
-*****************************************************************************************************
 
 proxy  Reactivity
 wrapping by using of proxy your value and update it give current target value . under the hood vue does this for us this magic.
@@ -229,5 +225,624 @@ Mac and Linux:
   "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",  
   "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
 },
- 
 
+******************************************************
+How Files Communicate?
+to communicate btw public ->html(a single html page) to App.vue file |Main.js act as Bridge| where we mount , componenet the app to connect with html
+here app consider SPA(single page appliction) have multiple componets list in App.Vue. eg<friend-contact>
+
+********************************************************
+Main Topics Component Communication
+
+props => parent -> child communictaion uni direction one way. immutable so saveit as in data child property then use it for change
+
+there is a reserved keyword props:[] which act as data property whatever name we mention inside in component that we use it in exact same in methods, template and when we pass data through template  component name as a attribute name= value . thereby suing single componenet multiple times passing different data using props we leverage dynamic way of accesing data using single comp multiple times. so reusing comp reducing duplication one of the core featuen of Vue.js
+
+so here instead of defineing every value in custom element(componenet) try using send through parent by V-for directive inside single comp so achive sing comp use it as multiple times by identifying through Key attribute to identify uniquely the data to remember it.
+
+and also props:[] we take it as props:{} --> so we can specify each property type,required,default and validator.
+
+eg for this list, isfaviroate 
+
+*****************************************************************
+emit Custom|| child to parent call.
+
+by $emit() 
+must in kebab-case.
+binding app data(db) to child props essential v-bind: 
+but when we click in template btn its should emit the id and a custom-attribute thereby define a method in data call it through custom-attribute thereby id pass happens cause of decalaritve vue approcah(frame work does for us)and find obj store toggle the value and assign to db(app data).
+
+*********************************************************************************
+rop / Event Fallthrough & Binding All Props
+There are two advanced concepts you also should have heard about:
+
+Prop Fallthrough
+
+Binding All Props on a Component
+
+Prop Fallthrough
+You can set props (and listen to events) on a component which you haven't registered inside of that component.
+
+For example:
+
+BaseButton.vue
+
+<template>  
+  <button>
+    <slot></slot>
+  </button>
+</template>
+ 
+<script>export default {}</script>
+This button component (which might exist to set up a button with some default styling) has no special props that would be registered.
+
+Yet, you can use it like this:
+
+<base-button type="submit" @click="doSomething">Click me</base-button>
+Neither the type prop nor a custom click event are defined or used in the BaseButton component.
+
+Yet, this code would work.
+
+Because Vue has built-in support for prop (and event) "fallthrough".
+
+Props and events added on a custom component tag automatically fall through to the root component in the template of that component. In the above example, type and @click get added to the <button> in the BaseButton component.
+
+You can get access to these fallthrough props on a built-in $attrs property (e.g. this.$attrs).
+
+This can be handy to build "utility" or pure presentational components where you don't want to define all props and events individually.
+
+You'll see this in action the component course project ("Learning Resources App") later.
+
+You can learn more about this behavior here: https://v3.vuejs.org/guide/component-attrs.html
+
+Binding all Props
+There is another built-in feature/ behavior related to props.
+
+If you have this component:
+
+UserData.vue
+
+<template>
+  <h2>{‌{ firstname }} {‌{ lastname }}</h2>
+</template>
+ 
+<script>
+  export default {
+    props: ['firstname', 'lastname']
+  }
+</script>
+You could use it like this:
+
+<template>
+  <user-data :firstname="person.firstname" :lastname="person.lastname"></user-data>
+</template>
+ 
+<script>
+  export default {
+    data() {
+      return {
+        person: { firstname: 'Max', lastname: 'Schwarz' }
+      };
+    }
+  }
+</script>
+But if you have an object which holds the props you want to set as properties, you can also shorten the code a bit:
+
+<template>
+  <user-data v-bind="person"></user-data>
+</template>
+ 
+<script>
+  export default {
+    data() {
+      return {
+        person: { firstname: 'Max', lastname: 'Schwarz' }
+      };
+    }
+  }
+</script>
+With v-bind="person" you pass all key-value pairs inside of person as props to the component. That of course requires person to be a JavaScript object.
+
+This is purely optional but it's a little convenience feature that could be helpful.
+
+****************************
+Define validate custom events
+
+emits:{
+	'toggle-favriote':function(id){
+	if(id){
+		return id;
+}else{
+	console.warn('id is missing')
+	return false;
+}
+}
+}
+********************************
+provide And Inject - pattern
+ provide in one place to inject in another place
+so therby we override funneling through props and emit still 100% is ok to use them but some where u want u can always explore
+
+provide & inject vs props & custom Events
+default mechanism is always u should use props and custom events .
+but when u found some pass through componenet case use wisely provide injection
+
+component Communication
+1. by using compnonet . it encapsulate logic in template. and split your code into multiple smaller pieces.
+2.components are used to build Uis by combining them.
+3. Componenets build "parent-child" realtions and use "unidirectional data flows" for communication
+
+custom Events(child => parent)
+1."Custom Events" are emiited(via $emit) to trigger a method in a parent component
+
+2.custom event can carry data which can be used in the called method 
+
+Props(parent=>child)
+1."Props" are used to pass data from a parent to a child component
+2.props should be defined in advance, possibly in great detail(type,required, etc).
+
+custom events(child=> parent)
+1."Custom Events" are emitted (via $emit) to trigger a method in a parent component
+
+2.Custom events can carry data which can be used in the called method
+
+provide-inject
+if data needs to be passed across multiple components("pass-through"), you can use provide/inject
+
+provide data in a parent component in to a child component.
+
+for exchange btw sibling or neighbours use parent is bridge to change data between two sibiling.
+
+DIVING DEEPER INTO COMPONENTS
+Global Comp vs Local Comp
+1.global comp - use when the comp need in all different comp then only register it.
+2. other wise register in app iteself.
+3. reason behind this is when all reg in globally our browser need to load and intiallize all comp befor render .
+4. affects performance could be a problem for bigger apps.
+
+syntax for local reg:
+import theheader
+data(){
+components:{
+     use 'the-header':theheader // from inport name
+(or)  TheHeader:theheader// use selfclosing tag for custom element <TheHeader/> works only in pascalcase.
+(or) TheHeader // enough modern js support takeit as key value pair
+}
+}
+
+
+APP.Vue is an entry point of entire comp.
+
+styling components.
+use scoped.
+<style scoped> only affect the comp not global level.
+how it splitt everything by custom attribute it apply automatically eg data-v-665RTUV. like this for every scope
+
+slot
+<slot></slot> want to wrap two dynamic content in inside a template and apply same style use 
+slot.
+
+to know which one comes under which element in slot component use naming for slot . 
+and V directive v-slot:header.
+
+slot styles the components.
+and Also set default value in slot comp.
+
+the v-slot--> #
+
+scoped slots
+like <template #default="anyname"-->gives obj>
+<h2>{{anyname.items}}</h2>
+<p>{{}slotProps['another-prop']}</p>
+
+//slot comp
+<template>
+<ul>
+<li v-for="goal in goals"
+<slot :item="goal" 'slot-props'="..."></slot>
+
+//dynamic components
+use html tag called <componenet is=""> which helps to shift comp dynamically
+
+//keep dynamic component alive
+keep alive comp helps to keep alive one comp input values when we do access dynamically the comp
+
+<keep-alive>
+<component :is="selectedGoal"></compnenet>
+</keep-alive>
+
+//teleporting elments 
+helps to optimize content syntax more symantically instead of more of being nested.
+
+use wrapping <teleport to="body">
+<error-alert v-if> </eror-alert>.
+</teleport>
+
+//fragments
+vue 2 u should have one wrapper element like div for   multiple top level elemnet which present inside.
+
+but vue 3 there is fragments u can use directly in template all top level lements without wrap.
+
+since its just for warp,styling.
+
+the view style guide.
+a documentation follow for how to name a file if it is a single comp for entire app. like basecomponent
+
+moving to different folder structure.
+maintain everything in diff folder eg products files in product folder.
+
+module summary:
+component Registration &styles
+
+Component can be registered globally or locally: Prefer local registration.
+styles can be global or scoped to a component: Prefer scoped for most components.
+
+slots
+slots can be used to add a "placeholder" for dnamic html code
+multiple, named slots are possible, dfault faalbacks can be provided. scoped slots allow adv. use-cases.
+
+dynamic components
+components can be swappes dynamically via the built-in "component" comp.
+Component cachng can be added via the "keep-alive" component.
+
+teleport & style guide
+dom structure can be manipulated via "teleport"-it keeps the component hierarchy!.
+consider keep your code clean and understandable.
+helps to teleport nested comp into exact loc like teleport to body of index.html at lat so is see everything norml but syntax level when inspect more optimize and helps to keep render peroformace up.
+*************************
+Finfished intermediate main project 
+Learned
+multiple comp with fragments
+slots,
+array,
+dynamic compound renderinng,
+scoped,
+global & local com register,
+teleport,
+keepalive,component
+higer order function like find,filter
+create,get,delete in local memory CRUD .
+***********************************
+Now Forms
+How to use forms manange by
+V-model, --> have modifier lazy,trim,number 
+v-model--> act as event list @ and data binding : by default . and also it accept data based on type of input we mention
+ref,
+custom event,
+validation. --> through @blur this listen when FOCUS go to next input tab .so logic plus target input throw styled err.
+custom comp. --> use 
+**********************************
+http request must create FireBase realtime DB`
+
+*****so there by we recive data through form and
+POST into realtime server using fetch API*****
+
+What is that? A POST request? And a REST API?
+
+There are different "kinds" of Http requests you could say - defined by the method (POST, GET, DELETE, ...) you attach to them (via the "method" you define on an outgoing request).
+
+And the server to which you're sending those requests may then react in which ever way it is configured to react to incoming requests with different methods.
+
+It may store data in a database for an incoming POST request, it may fetch data for a GET request.
+
+Typically, servers are built to work as a "REST API" - that means they have clearly defined "endpoints" (URL + Http method combinations) for which they do different things.
+
+****GET Method
+use thenables ,loops tore in array push to global array for local memory access.
+
+*****No Data State****
+use condition to so no data found add data (text) in p tag.
+
+****Handling errors****
+fetch-->promise run async fetch details
+then --> if any response from fetch & also for technical errors also mange by request.ok or not
+catch--> catch error
+
+handle Technical error/ browser side.
+through Catch method in then chain using data properties and redering conditions.
+
+handle error from server side.
+eg remove json.Stringify and handle tech error through then if error throw it catch by catch set message of err for error proprty.
+
+*****Router Navigation
+npm install --save vue-router@next --package
+so first create router inside set history,routes path, comp registration.
+then go to have define router-view and got to btn remove btn set router-link to="" thays it.
+
+styling links . in dev tools active link, exact active link we can change it in main.js
+
+calling particular id and its details through url itself dynamically.
+
+updating parameters data with watchers.
+try to route again inside routed may have some rendering issue comp level so use watchers and watch routes update the latest route.
+
+Hot Reload needed sometimes
+
+passing params as props
+set props : true in main.js then define props act as  url find id property value
+
+redirect and alias
+mainjs redirect:'/' helpos to riderect
+alias which act as a option for it.
+
+catchall --> unwnted by redirecting setin :notfound(.*)
+
+qyery param---> optional use it trhough named param obj.
+
+using nested routes - children 
+
+named routes -> through objects |naming for routes in main js path|
+
+multiple routes view through nameing route view,default
+
+controlling scroll behavior
+by to,from,savepoints with if condition logic. 
+left,top
+
+
+Navigation Guard
+1.router.beforEach(to,from,next) & afterEach
+here right conditions before each global level route what should do.
+
+2.same like inside path also BeforeEnter()
+
+3. same link we can give in component also BeforeRouteEnter.
+
+****utilizing route Metadata 
+add on advantage like eg key:val --> auth:true
+
+organize into neatly --> sperate route js file.
+
+
+animations and css Transistions  
+Into for css animations.
+use transisition componets and it's state
+1.mounted .v-enter-from, .v-enter-active, .v-enter-to
+2.unmounted .v-leave-from , .v-leave-active, v-leave-to
+manage multiple transition through naming them eg para-enter-from . and also use enter-to-class, enter-para-class
+
+yes we add animation keywframes for complex one indetify the name of animi use inside v-enter-active   				
+
+custom transition comp name eg para-enter-from.
+
+define transition comp is take only one child inside.
+so eg like modal for error popops use trans inside the .
+
+TRANSITION B/W MULTIPLE ELEMNET
+(but one Exceptional it works for any scenario with if condition else even 2 element but visible elemnet at a time. it works)
+
+Using Transition events which equvia;lent to trans class.
+
+they are 
+@before-enter
+@enter
+@after-enter
+@before-leave
+@leave
+@after-leave 
+@enter-cancelled
+@leave-canclelled
+
+Build transition through Js (isteasd of css)
+Green shock to build complex animation with javascript.
+
+in transition disabling CSS Transition
+
+:CSS="false";
+we use js to control it using buit in trans events and custom js methods.
+
+Animation the list through
+transition-group components
+use css enter-from,active,& leave-to
+
+when multiple elments it will snap how to rectify . we will by .v-move{} its automatically under the hood by using transition properties .
+use position absolute to del item smooth behaviour.
+
+animation for routes same like wrap (old style)
+VUE 3 says use inside of <route-link v-slot:slotsProps><trans><comp :is="slotProps"></comp></Trans></route-link>
+
+vuex
+
+as you build bigger and bigger application 
+managing application state will become complex the application data.
+
+Better state managemnet with vuex 
+Replacing provide/inject 
+
+Vues is a libaray for managing global state
+
+State? --> Data
+Local State Global Satate
+LS Affects one Componenet
+eg: enter user input
+show/hide container
+
+
+GS Affects entire application
+eg:multi comp, user auth, shopping cart
+
+replacing provide and inject 
+cause when application grows maintain glbal states will be tricky and also some other disadvantageous is thier to tell
+
+
+Managing app wide / global state can be difficult
+
+"fat Compnents"
+App.vue contains lot of data and logic
+
+"unpredictable"
+it's not always obvious where data (state) gets changes in which way
+
+Error-prone
+Accidental or missed stae updates are possible
+
+
+with vuex
+
+Outsourced state managemnet
+predictable state mangament /flow
+clearly defined data flow:
+Less errors.
+
+Creating Vuex store--> which stores our application state import {createStore} from 'vuex';
+
+create new store
+then use through other com through $Store.state.statename --> state like data() property can access anywhere.
+
+so we can have different logic for same state in diff comp eg counter define in state and use it diff comp logic inc it cat like that.
+
+because comp---->vuex not should directly update state. it use mutations.
+
+mutations:{
+//add methods
+incremnt(state){
+state.counter++;
+}
+we use it in comp by this.$store.commit('incremnet')
+.
+
+and also we use payload
+//add methods in mutation
+increase(state,payload){
+state.counter = state.counter.payload.value}
+
+use it comp
+this.$store.commit('increase',{value:10});
+or
+this.$store.commit({
+type:'increase'
+Value:10
+})
+
+a better way getting or try to communicate with vuex store data state
+getters:{
+
+finalCounter(state){
+return state.counter * 3;
+},
+normailzedCouter(state, getters){
+const finalCounter = 
+if(finalcounter<0){
+return 0;}
+if(finalcounter >100){
+return 100;}
+return finalCounter;
+}
+}
+this.$store.getters.normalizedCounter;
+
+//running async code with actions
+actions:{
+	increment(context){
+	context.commit('increment');
+}
+}
+
+
+diagram of accessing a global state store
+
+
+	||___________>	mutation
+	||			||
+	||			||
+	||			\/
+ 	Actions		Store vuex Gloabe state _______>Getters
+	||						   /\
+	||						   |
+	||						   |		
+	||<____________Components<_________________________|
+
+
+so in comp we will this.$store.dispatch({
+type:'increase',
+value:10,
+})
+
+understanding Action Contex more
+log Context
+have commit,dispatch,getters,state,rootgetters
+
+//MapHelpers --> using those dont want create a method to deine the sate inside the comp use
+maphelpers hold all getters and Action(setters) use it to get and set value 
+...mapGetters(['final-counter'])
+...mapActions({
+inc : 'increment'
+}) 
+
+eg of login and logout -- adding more state
+
+//maintaing in structure by modules.
+options by outsoucring the state .  but not multiple store. but multiple module 
+thereby we maintain clean and lean our store
+
+//so reg everyting as module com in one store.
+
+ //understanding local module state
+state are local to that module cant acces like mut,gett,action those are global .
+
+//namespace :true --> uses to avoid name clashes. to detach
+then default no get,action,mut works.
+use reg modue name in comp like
+this.$store.getters['numbers/finalCounter']
+
+//to maintain more structure put separate
+store folder indexjs and same for mutations, getters,actions,
+
+
+
+
+
+
+**********The Main Project************
+1.Define Features(key futres first, then sub fetueare)
+
+2.derive data models/vuex store layout
+app-wide state & getters 
+actions,mutations.
+
+
+3. design & component routing(include)
+********************************************
+Planning data Requiremnet
+
+Data
+coaches
+1.list of coaches
+$id----------------------
+$firstname		|
+$lastname		|
+$description		|
+$rate			|
+requests 		|
+2.list of request	|
+$coach ID ---------------
+$message
+$email
+
+mutations 
+coaches
+register
+set coaches
+
+contacts
+contactCoach
+setRequests
+
+*********************************
+Design & componenets
+/layout
+
+/coaches -> coacheList
+/coach/id -> coach details
+/register -> coach registerration
+/contact -> contact coach
+/request -> reques recieved
+
+
+************************
+main(btn(coaches),(req) in headers)--> coachList----> press contact----> request contact--> click request leads to request page.
+
+
+
+
+ 

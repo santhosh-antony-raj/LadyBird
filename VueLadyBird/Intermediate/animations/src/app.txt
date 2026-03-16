@@ -1,0 +1,45 @@
+********************************************************
+************use it for revision in app*****************
+**************************************************************
+<div class="container">
+  <user-list></user-list>
+</div>
+
+<!-- simple example -->
+  <div class="container">
+    <div class="block" :class="{animateBoxMoveStyle:BoxMove}"></div>
+    <button @click="animateBoxMove" >Animate</button>
+  </div>
+  <!-- js through controll by trans events -->
+  <div class="container">
+    <transition
+    :css="false"
+     @before-enter="beforeEnter" 
+     @enter="enterActive" 
+     @after-enter="afterEnter" 
+     @before-leave="beforeLeave" 
+     @leave="leaveActive"
+     @after-leave="afterLeave"
+     @enter-cancelled="enterCancelled"
+     @leave-cancelled="leaveCancelled">
+    <p v-if="isPara">This is a paragraph</p>
+    </transition>
+    <button @click="paraAva">Click Me</button>
+  </div>
+  <!-- multiple elment still trans work -->
+  <div class="container">
+    <transition name='detail' mode="out-in">
+    <button @click="showDetail" v-if="!isDetailVisible">Show Details</button>
+    <button @click="hideDetail" v-else>Hide Details</button>
+    </transition>
+  </div>
+  
+  <base-modal @close="hideDialog" :open="dialogIsVisible">
+    <p>This is a test dialog!</p>
+    <button @click="hideDialog">Close it!</button>
+  </base-modal>
+  <div class="container">
+    <button @click="showDialog">Show Dialog</button>
+  </div>
+
+ ********************************************************************* use it for revision in app*********************

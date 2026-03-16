@@ -11,16 +11,16 @@ Behind the Scene✔
 
 Intermendiate
 CLI Setup ✔
-Components
-Components Communication
-Behind the Scenes
-Forms
-Http
-Routing
-Animations
+Components✔
+Components Communication✔
+Behind the Scenes✔
+Forms✔
+Http✔
+Routing✔
+Animations✔
 
 Advanced
-Vuex,Authentication,Deployment & Optimization,
+Vuex,Authentication,Deployment & Optimization,✔
 Composition Api, Re-using Code
 
 
