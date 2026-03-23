@@ -1,5 +1,67 @@
 <template>
+    <div>
+    <section v-if="selectedCoach">
+        <base-card>
+        <h2>{{ fullName }}</h2>
+        <h3>$ {{ rate }} Dollars</h3>
+        </base-card>
+    </section>
+    <section>
+   <base-card>
+    <header>
+        <h2>Interested? Reach out Now!</h2>
+        <base-button  link :to="contactLink">Contact</base-button>
+    </header>
     <router-view></router-view>
-    <h1>Coach Detail</h1>
-    <router-link to="/coach/c1/contact">Contact Coach</router-link>
+   </base-card>
+   </section>
+   <section>
+    <base-card>
+        <base-badge v-for="area in areas" :key="area" :title="area" :type="area"></base-badge>
+        <p>{{ description }}</p>
+    </base-card>
+   </section>
+   </div>
+
 </template>
+
+<script>
+export default {
+    props:['id'],
+    data(){
+        return{
+            selectedCoach:null,
+        }
+        
+    },
+    created(){
+        this.selectedCoach = this.$store.getters['coachMod/coaches'].find(coach=>coach.id===this.id);
+    },
+    computed:{
+        fullName(){
+            return this.selectedCoach.firstName + ' '+ this.selectedCoach.lastName;
+        },
+        contactLink(){
+            return this.$route.path + '/contact'//coaches/c1/contact
+        },
+        rate(){
+            return this.selectedCoach.hourlyRate;
+        },
+        areas(){
+            return this.selectedCoach.areas;
+        },
+        description(){
+            return this.selectedCoach.description;
+        }
+    },
+    methods:{
+       /*  saveData(data){
+            console.log("contact Emitted");
+            
+            this.$store.dispatch('contactMod/addContact',data);
+            this.$router.replace('/request');
+        } */
+    }
+
+}
+</script>

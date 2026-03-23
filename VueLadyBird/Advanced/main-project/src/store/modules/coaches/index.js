@@ -11,6 +11,7 @@ export default{
     mutations, 
     state(){
         return{
+          lastFetch:null,
            coaches: [
   {
     id: 'c1',
